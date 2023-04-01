@@ -8,16 +8,26 @@
 </head>
 <body>
     <div class="container">
-        This is a container
+        Time now is <span id="time"></span>
     </div>
     <script>
         console.log("This is tutorial 58");
 
 
-        function greet(){
-            console.log("Hello Good Morning");
+        function greet(name, dada){
+            console.log("Hello Good Morning" + name + " " + dada);
         }
-        setTimeout(greet, 5000);
+        // setTimeout(greet, 5000);
+
+        // intervalid = setInterval(greet, 1000, "edwin", "Good morning");
+        // clearInterval(intervalid);
+
+        function displayTime(){
+            time = new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+        setInterval(displayTime, 1000);
     </script>
 </body>
 </html>
