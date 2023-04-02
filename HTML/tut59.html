@@ -6,9 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .container{
+        font-size: 30px;
+        background-color: blueviolet;
+        border: 2px solid black;
+        padding: 34px;
+        margin: 4px;
+        text-align: center;
+        
+    }
+    #time{
+        font-weight: bold;
+    }
+
+</style>
 <body>
     <div class="container">
-        this is a container
+        <!-- this is a container -->
+        Current time is <spam id="time"></spam>
     </div>
     <script>
         console.log("This is date and time tutorial");
@@ -36,6 +52,16 @@
 
         let hours = newDate.getHours();
         console.log("This hours is ", hours);
+
+        newDate.setDate(39);
+        newDate.setMinutes(50);
+        console.log(newDate);
+        setInterval(updateTime,1000);
+
+        function updateTime(){
+            time.innerHTML = new Date();
+        }
+
 
     </script>
 </body>
