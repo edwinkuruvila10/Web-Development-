@@ -27,10 +27,11 @@
         }, 3000);
 
         let obj1={
+            greeting: "good morning"
             names: ["edwin", "pranav", "slkdch"],
             speak(){
                 this.names.forEach((student)=>{
-                    console.log("dadadadada" + student);
+                    console.log(this.greeting + "dadadadada" + student);
                 });
             }
 
